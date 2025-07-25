@@ -1,0 +1,29 @@
+import Image from "next/image";
+
+export default function Hero() {
+  return (
+    <div>
+      <header className="flex justify-between items-center">
+        <h1 className="text-4xl font-bold tracking-tight">문광수</h1>
+        <div>
+          <button className="py-2 px-4 rounded underline hover:bg-black hover:text-white transition duration-300">
+            RESUME
+          </button>
+        </div>
+      </header>
+      <section className="w-full flex flex-col items-center justify-center text-center py-24 gap-6">
+        <Image
+          src="/profile.jpeg"
+          alt="프로필 사진"
+          width={120}
+          height={120}
+          className="rounded-full border border-gray-200 shadow-sm mb-4"
+        />
+        <p className="text-lg text-gray-600 max-w-xl">
+          저는 세상의 문제를 찾아 코드로서 해결하는 개발자입니다.<br />
+          모바일과 웹을 넘나들며, 사용성과 완성도를 함께 고민합니다.
+        </p>
+      </section>
+    </div>
+  );
+} 
