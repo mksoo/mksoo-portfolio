@@ -4,6 +4,8 @@ export default function Home() {
   return (
     <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
       <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
+        <h1 className="text-4xl font-bold mb-4">안녕하세요, 개발자 문광수입니다.</h1>
+        <p className="text-lg">React, React Native를 활용한 프론트엔드 개발자입니다.</p>
         <Image
           className="dark:invert"
           src="/next.svg"
