@@ -3,14 +3,6 @@ import Image from "next/image";
 export default function Hero() {
   return (
     <div>
-      <header className="flex justify-between items-center">
-        <h1 className="text-4xl font-bold tracking-tight">문광수</h1>
-        <div>
-          <button className="py-2 px-4 rounded underline hover:bg-black hover:text-white transition duration-300">
-            RESUME
-          </button>
-        </div>
-      </header>
       <section className="w-full flex flex-col items-center justify-center text-center py-24 gap-6">
         <Image
           src="/profile.jpeg"
