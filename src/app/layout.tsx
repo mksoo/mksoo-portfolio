@@ -3,6 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import Header from "./components/layouts/Header";
+import Footer from "./components/layouts/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,9 +29,11 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased container min-h-screen mx-auto py-4 px-4`}
       >
+        <Header/>
         {children}
+        <Footer/>
         <SpeedInsights />
       </body>
     </html>
