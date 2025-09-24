@@ -9,8 +9,6 @@ export default function Hero() {
   const [isDeleting, setIsDeleting] = useState(false);
   const [particles, setParticles] = useState<Array<{left: number, delay: number, duration: number}>>([]);
 
-  const roles = ['창업가', '데이터 사이언티스트', '풀스택 개발자'];
-
   // 파티클 데이터를 클라이언트에서만 생성
   useEffect(() => {
     const generateParticles = () => {
@@ -27,6 +25,7 @@ export default function Hero() {
 
   useEffect(() => {
     const typeEffect = () => {
+      const roles = ['창업가', '데이터 사이언티스트', '풀스택 개발자'];
       const current = roles[currentRole];
       
       if (!isDeleting) {
@@ -45,9 +44,9 @@ export default function Hero() {
       }
     };
 
-    const timer = setTimeout(typeEffect, isDeleting ? 50 : 100);
+    const timer = setTimeout(typeEffect, 50);
     return () => clearTimeout(timer);
-  }, [displayText, isDeleting, currentRole, roles]);
+  }, [displayText, isDeleting, currentRole]);
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-gray-50 to-white">
@@ -69,7 +68,7 @@ export default function Hero() {
       <div className="text-center z-10 max-w-4xl px-8">
         {/* Profile Image */}
         <div className="relative mb-8">
-          <div className="w-40 h-40 mx-auto rounded-full bg-gradient-to-r from-gray-700 to-gray-500 p-1 animate-pulse">
+          <div className="w-40 h-40 mx-auto rounded-full bg-gradient-to-r from-gray-700 to-gray-500 p-1">
             <Image
               src="/profile.jpeg"
               alt="문광수 프로필"
