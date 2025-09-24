@@ -61,19 +61,29 @@ body {
 
 :root {
   --radius: 0.625rem;
+  /* 새로운 색상 팔레트 - 무채색 + 노란 포인트 */
+  --primary: #374151; /* Gray 700 */
+  --secondary: #6B7280; /* Gray 500 */
+  --accent: #F59E0B; /* Amber 500 - 포인트 색상 */
+  --dark: #111827; /* Gray 900 */
+  --dark-card: #1F2937; /* Gray 800 */
+  --light: #FFFFFF; /* Pure White */
+  --text: #374151; /* Gray 700 */
+  --text-light: #9CA3AF; /* Gray 400 */
+  --gradient-main: linear-gradient(135deg, #374151 0%, #6B7280 100%);
+  --gradient-hover: linear-gradient(135deg, #F59E0B 0%, #FCD34D 100%);
+  
+  /* 기존 변수들 유지 */
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
   --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
   --secondary-foreground: oklch(0.205 0 0);
   --muted: oklch(0.97 0 0);
   --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
   --accent-foreground: oklch(0.205 0 0);
   --destructive: oklch(0.577 0.245 27.325);
   --border: oklch(0.922 0 0);
@@ -135,4 +145,26 @@ body {
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* Particle Animation */
+@keyframes floatDown {
+  from {
+    transform: translateY(-100vh) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.3;
+  }
+  90% {
+    opacity: 0.3;
+  }
+  to {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.particle-float {
+  animation: floatDown linear infinite;
 }
