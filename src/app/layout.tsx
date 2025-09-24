@@ -29,10 +29,12 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased container min-h-screen mx-auto py-4 px-4`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen`}
       >
         <Header/>
-        {children}
+        <main className="pt-0">
+          {children}
+        </main>
         <Footer/>
         <SpeedInsights />
       </body>
