@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Badge from "./common/Badge";
 
 export default function Projects() {
   const [activeFilter, setActiveFilter] = useState("all");
@@ -129,12 +130,7 @@ export default function Projects() {
 
               <div className="flex flex-wrap gap-2">
                 {project.tech.map((tech, index) => (
-                  <span
-                    key={index}
-                    className="px-3 py-1 bg-gradient-to-r from-gray-700 to-gray-500 text-white text-sm rounded-full font-medium"
-                  >
-                    {tech}
-                  </span>
+                  <Badge key={index}>{tech}</Badge>
                 ))}
               </div>
             </div>

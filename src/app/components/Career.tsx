@@ -65,12 +65,7 @@ export default function Career() {
                     </p>
                     <div className="flex flex-wrap gap-2">
                       {job.tech.map((tech, techIndex) => (
-                        <span 
-                          key={techIndex}
-                          className="px-3 py-1 bg-gradient-to-r from-gray-700 to-gray-500 text-white text-sm rounded-full font-medium"
-                        >
-                          {tech}
-                        </span>
+                        <Badge key={techIndex}>{tech}</Badge>
                       ))}
                     </div>
                   </div>
