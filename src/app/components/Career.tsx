@@ -1,6 +1,5 @@
-"use client";
-
 import Image from "next/image";
+import Badge from "./common/Badge";
 
 export default function Career() {
 
@@ -14,17 +13,17 @@ export default function Career() {
     },
     {
       company: "FLES",
-      period: "2022.01 - 2024.05",
+      period: "2022.01 - 2023.02",
       logo: "/logo-fles.png",
       description: "데이터 사이언티스트로 KPI 대시보드 제작\n고려대학교와 AI 공동연구 (자연어처리, 추천시스템)",
-      tech: ["Python", "Tableau", "NLP", "ML"]
+      tech: ["Python", "Data Science", "NLP", "ML"]
     },
     {
       company: "에듀포미",
-      period: "2020.10 - 2021.06",
+      period: "2020.08 - 2021.06",
       logo: "/logo-에듀포미.png",
       description: "영유아 학부모 대상 성교육 플랫폼 스타트업 창업\n예비창업패키지 선정 (4,000만원 규모)",
-      tech: ["창업", "기획", "MVP"]
+      tech: ["창업", "기획", "개발", "MVP"]
     }
   ];
 
@@ -49,11 +48,10 @@ export default function Career() {
                       <div className="w-12 h-12 rounded-lg flex items-center justify-center">
                         <Image
                           src={job.logo}
-                          alt="회사 로고"
+                          alt={`${job.company} logo`}
                           width={120}
                           height={120}
                         />
-                        
                       </div>
                       <div>
                         <h3 className="text-xl font-bold text-gray-800">{job.company}</h3>

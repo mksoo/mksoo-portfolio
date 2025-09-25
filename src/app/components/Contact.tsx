@@ -28,7 +28,7 @@ export default function Contact() {
             </div>
             <div className="text-left">
               <div className="text-sm text-gray-400 mb-1">Location</div>
-              <div className="text-lg">Seoul, South Korea</div>
+              <div className="text-lg">Hwasung, South Korea</div>
             </div>
           </div>
         </div>
@@ -43,7 +43,7 @@ export default function Contact() {
             <span className="font-bold">G</span>
           </a>
           <a
-            href="https://linkedin.com/in/kwangsu-mun-95681b229"
+            href="https://www.linkedin.com/in/kwangsu-mun-%EB%AC%B8%EA%B4%91%EC%88%98-95681b229/"
             target="_blank"
             rel="noopener noreferrer"
             className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center text-white hover:bg-gradient-to-r hover:from-gray-700 hover:to-gray-500 transform hover:-translate-y-1 transition-all duration-300"
@@ -51,10 +51,11 @@ export default function Contact() {
             <span className="font-bold">L</span>
           </a>
           <a
-            href="#"
+            href="https://sept-moon.tistory.com"
+            target="_blank"
             className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center text-white hover:bg-gradient-to-r hover:from-gray-700 hover:to-gray-500 transform hover:-translate-y-1 transition-all duration-300"
           >
-            <span className="font-bold">N</span>
+            <span className="font-bold">B</span>
           </a>
         </div>
       </div>
