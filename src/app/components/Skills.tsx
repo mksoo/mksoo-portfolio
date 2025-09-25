@@ -1,7 +1,7 @@
 export default function Skills() {
   const skillCategories = [
     {
-      icon: "📱",
+      icon: "🌐",
       title: "Mobile & Web",
       skills: [
         { name: "React Native", level: 5 },
@@ -61,10 +61,9 @@ export default function Skills() {
                         key={dotIndex}
                         className={`w-2 h-2 rounded-full transition-all duration-300 ${
                           dotIndex < skill.level 
-                            ? 'bg-gradient-to-r from-gray-700 to-gray-500 animate-pulse' 
+                            ? 'bg-amber-500'
                             : 'bg-gray-200'
                         }`}
-                        style={{ animationDelay: `${dotIndex * 0.1}s` }}
                       />
                     ))}
                   </div>
