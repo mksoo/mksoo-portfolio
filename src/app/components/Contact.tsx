@@ -83,9 +83,18 @@ export default function Contact() {
           <a
             href="https://sept-moon.tistory.com"
             target="_blank"
+            aria-label="Open Blog"
             className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center text-white hover:bg-gradient-to-r hover:from-gray-700 hover:to-gray-500 transform hover:-translate-y-1 transition-all duration-300"
           >
-            <span className="font-bold">B</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              className="w-6 h-6"
+              aria-hidden="true"
+            >
+              <path d="M19.5 3.75h-15A1.5 1.5 0 0 0 3 5.25v13.5A1.5 1.5 0 0 0 4.5 20.25h15a1.5 1.5 0 0 0 1.5-1.5V5.25a1.5 1.5 0 0 0-1.5-1.5Zm-1.5 3v1.5H6V6.75h12Zm0 3.75v1.5H6V9.75h12Zm0 3.75v1.5H6v-1.5h12Z" />
+            </svg>
           </a>
         </div>
       </div>
