@@ -1,9 +1,11 @@
+import dayjs from "dayjs";
+
 export default function Footer() {
   return (
-    <footer className="border-t">
-      <div className="container mx-auto flex h-14 items-center justify-center">
-        <p className="text-muted-foreground text-sm">
-          Built with Next.js, Tailwind CSS and shadcn/ui
+    <footer className="py-4">
+      <div className="max-w-6xl mx-auto px-8 text-center">
+        <p className="text-gray-400 text-sm">
+          © {dayjs().year()} mksoo. All rights reserved.
         </p>
       </div>
     </footer>
