@@ -66,7 +66,8 @@ export default function Projects() {
   );
 
   return (
-    <section id="projects" className="py-20 px-8 max-w-6xl mx-auto">
+    <section id="projects" className="py-20 px-8 bg-gray-100">
+      <div className="max-w-6xl mx-auto">
       <h2 className="text-4xl font-black text-center mb-16 relative">
         PROJECTS
         <div className="absolute bottom-[-10px] left-1/2 transform -translate-x-1/2 w-16 h-1 bg-gradient-to-r from-gray-700 to-gray-500 rounded-full"></div>
@@ -136,6 +137,7 @@ export default function Projects() {
             </div>
           </div>
         ))}
+      </div>
       </div>
     </section>
   );

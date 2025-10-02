@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { scrollToSection } from "@/utils/scroll";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -28,29 +29,29 @@ export default function Header() {
         
         <ul className="hidden md:flex gap-8">
           <li>
-            <Link href="#home" className="text-gray-700 font-medium hover:text-gray-900 transition-colors duration-300">
+            <button onClick={() => scrollToSection('home')} className="text-gray-700 font-medium hover:text-gray-900 transition-colors duration-300 cursor-pointer">
               Home
-            </Link>
+            </button>
           </li>
           <li>
-            <Link href="#skills" className="text-gray-700 font-medium hover:text-gray-900 transition-colors duration-300">
+            <button onClick={() => scrollToSection('skills')} className="text-gray-700 font-medium hover:text-gray-900 transition-colors duration-300 cursor-pointer">
               Skills
-            </Link>
+            </button>
           </li>
           <li>
-            <Link href="#career" className="text-gray-700 font-medium hover:text-gray-900 transition-colors duration-300">
+            <button onClick={() => scrollToSection('career')} className="text-gray-700 font-medium hover:text-gray-900 transition-colors duration-300 cursor-pointer">
               Career
-            </Link>
+            </button>
           </li>
           <li>
-            <Link href="#projects" className="text-gray-700 font-medium hover:text-gray-900 transition-colors duration-300">
+            <button onClick={() => scrollToSection('projects')} className="text-gray-700 font-medium hover:text-gray-900 transition-colors duration-300 cursor-pointer">
               Projects
-            </Link>
+            </button>
           </li>
           <li>
-            <Link href="#contact" className="text-gray-700 font-medium hover:text-gray-900 transition-colors duration-300">
+            <button onClick={() => scrollToSection('contact')} className="text-gray-700 font-medium hover:text-gray-900 transition-colors duration-300 cursor-pointer">
               Contact
-            </Link>
+            </button>
           </li>
         </ul>
 

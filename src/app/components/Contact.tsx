@@ -35,7 +35,7 @@ export default function Contact() {
           </div>
 
           <div className="flex items-center gap-4">
-            <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center text-2xl">
+            <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center text-2xl cursor-default">
               📍
             </div>
             <div className="text-left">
