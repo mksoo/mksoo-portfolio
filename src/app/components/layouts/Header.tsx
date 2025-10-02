@@ -15,6 +15,15 @@ export default function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const handleSmoothScroll = (arg: {e: React.MouseEvent<HTMLButtonElement>, id: string}) => {
+    const { e, id } = arg;
+    e.preventDefault();
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   return (
     <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
       isScrolled 
@@ -28,29 +37,29 @@ export default function Header() {
         
         <ul className="hidden md:flex gap-8">
           <li>
-            <Link href="#home" className="text-gray-700 font-medium hover:text-gray-900 transition-colors duration-300">
+            <button onClick={(e) => handleSmoothScroll({e, id: 'home'})} className="text-gray-700 font-medium hover:text-gray-900 transition-colors duration-300 cursor-pointer">
               Home
-            </Link>
+            </button>
           </li>
           <li>
-            <Link href="#skills" className="text-gray-700 font-medium hover:text-gray-900 transition-colors duration-300">
+            <button onClick={(e) => handleSmoothScroll({e, id: 'skills'})} className="text-gray-700 font-medium hover:text-gray-900 transition-colors duration-300 cursor-pointer">
               Skills
-            </Link>
+            </button>
           </li>
           <li>
-            <Link href="#career" className="text-gray-700 font-medium hover:text-gray-900 transition-colors duration-300">
+            <button onClick={(e) => handleSmoothScroll({e, id: 'career'})} className="text-gray-700 font-medium hover:text-gray-900 transition-colors duration-300 cursor-pointer">
               Career
-            </Link>
+            </button>
           </li>
           <li>
-            <Link href="#projects" className="text-gray-700 font-medium hover:text-gray-900 transition-colors duration-300">
+            <button onClick={(e) => handleSmoothScroll({e, id: 'projects'})} className="text-gray-700 font-medium hover:text-gray-900 transition-colors duration-300 cursor-pointer">
               Projects
-            </Link>
+            </button>
           </li>
           <li>
-            <Link href="#contact" className="text-gray-700 font-medium hover:text-gray-900 transition-colors duration-300">
+            <button onClick={(e) => handleSmoothScroll({e, id: 'contact'})} className="text-gray-700 font-medium hover:text-gray-900 transition-colors duration-300 cursor-pointer">
               Contact
-            </Link>
+            </button>
           </li>
         </ul>
 
