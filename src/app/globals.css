@@ -148,9 +148,9 @@ body {
 }
 
 /* Particle Animation */
-@keyframes floatDown {
+@keyframes floatUp {
   from {
-    transform: translateY(-100vh) rotate(0deg);
+    transform: translateY(100vh);
     opacity: 0;
   }
   10% {
@@ -160,11 +160,11 @@ body {
     opacity: 0.3;
   }
   to {
-    transform: translateY(100vh) rotate(360deg);
+    transform: translateY(-100vh);
     opacity: 0;
   }
 }
 
 .particle-float {
-  animation: floatDown linear infinite;
+  animation: floatUp linear infinite;
 }

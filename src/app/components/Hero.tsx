@@ -7,14 +7,15 @@ export default function Hero() {
   const [currentRole, setCurrentRole] = useState(0);
   const [displayText, setDisplayText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
-  const [particles, setParticles] = useState<Array<{left: number, delay: number, duration: number}>>([]);
+  const [particles, setParticles] = useState<Array<{left: number, top: number, delay: number, duration: number}>>([]);
 
   // 파티클 데이터를 클라이언트에서만 생성
   useEffect(() => {
     const generateParticles = () => {
       const newParticles = Array.from({ length: 50 }).map(() => ({
         left: Math.random() * 100,
-        delay: Math.random() * 20,
+        top: Math.random() * 100,
+        delay: -(Math.random() * 20),
         duration: 15 + Math.random() * 10
       }));
       setParticles(newParticles);
@@ -58,6 +59,7 @@ export default function Hero() {
             className="absolute w-1 h-1 bg-gray-400 rounded-full opacity-30 particle-float"
             style={{
               left: `${particle.left}%`,
+              top: `${particle.top}%`,
               animationDelay: `${particle.delay}s`,
               animationDuration: `${particle.duration}s`,
             }}
