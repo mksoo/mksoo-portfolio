@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { scrollToSection } from "@/utils/scroll";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -14,15 +15,6 @@ export default function Header() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  const handleSmoothScroll = (arg: {e: React.MouseEvent<HTMLButtonElement>, id: string}) => {
-    const { e, id } = arg;
-    e.preventDefault();
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  };
 
   return (
     <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
@@ -37,27 +29,27 @@ export default function Header() {
         
         <ul className="hidden md:flex gap-8">
           <li>
-            <button onClick={(e) => handleSmoothScroll({e, id: 'home'})} className="text-gray-700 font-medium hover:text-gray-900 transition-colors duration-300 cursor-pointer">
+            <button onClick={() => scrollToSection('home')} className="text-gray-700 font-medium hover:text-gray-900 transition-colors duration-300 cursor-pointer">
               Home
             </button>
           </li>
           <li>
-            <button onClick={(e) => handleSmoothScroll({e, id: 'skills'})} className="text-gray-700 font-medium hover:text-gray-900 transition-colors duration-300 cursor-pointer">
+            <button onClick={() => scrollToSection('skills')} className="text-gray-700 font-medium hover:text-gray-900 transition-colors duration-300 cursor-pointer">
               Skills
             </button>
           </li>
           <li>
-            <button onClick={(e) => handleSmoothScroll({e, id: 'career'})} className="text-gray-700 font-medium hover:text-gray-900 transition-colors duration-300 cursor-pointer">
+            <button onClick={() => scrollToSection('career')} className="text-gray-700 font-medium hover:text-gray-900 transition-colors duration-300 cursor-pointer">
               Career
             </button>
           </li>
           <li>
-            <button onClick={(e) => handleSmoothScroll({e, id: 'projects'})} className="text-gray-700 font-medium hover:text-gray-900 transition-colors duration-300 cursor-pointer">
+            <button onClick={() => scrollToSection('projects')} className="text-gray-700 font-medium hover:text-gray-900 transition-colors duration-300 cursor-pointer">
               Projects
             </button>
           </li>
           <li>
-            <button onClick={(e) => handleSmoothScroll({e, id: 'contact'})} className="text-gray-700 font-medium hover:text-gray-900 transition-colors duration-300 cursor-pointer">
+            <button onClick={() => scrollToSection('contact')} className="text-gray-700 font-medium hover:text-gray-900 transition-colors duration-300 cursor-pointer">
               Contact
             </button>
           </li>
